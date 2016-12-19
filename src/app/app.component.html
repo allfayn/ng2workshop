@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-md-4">
+      <widget-user [user]="authService.user|async" (logout)="logout($event)"></widget-user>
+      <a [routerLink]="['items']">Items</a>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item|json}}
+      <a (click)="remove(item.$key)">#</a>
+      <a [routerLink]="[item.$key]">-></a>
+    </li>
+  </ul>
+  <a (click)="add()" class="btn btn-primary">Add</a>
+  <!--<a (click)="remove()" class="btn btn-primary">Remove</a>-->
+</div>

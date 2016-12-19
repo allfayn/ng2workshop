@@ -1,0 +1,6 @@
+<ul *ngIf="user">
+  <li>{{user.username}}</li>
+  <li>{{user.email}}</li>
+  <li><a (click)="sendLogout()">Logout!</a></li>
+</ul>
+<a [routerLink]="['/login']" *ngIf="!user">Login</a>
